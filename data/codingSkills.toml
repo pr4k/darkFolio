@@ -1,16 +1,20 @@
 [[skill]]
-    Name = "Web Dev"
-    Icon = "fa fa-2x fa-code"
-    Summary= "Summary 1"
-[[skill]]
     Name = "Python"
-    Icon = "fa fa-2x fa-code"
-    Summary= "Summary 2"
+    Icon = "svg/python-5-logo-svg-vector.svg"
+    Rating= 68
+    svg = true
 [[skill]]
-    Name = "cloud"
-    Icon = "fa fa-2x fa-code"
-    Summary= "Summary 3"
+    Name = "Rust"
+    Icon = "fab fa-4x fa-rust"
+    svg = false
+    Rating= 71
 [[skill]]
-    Name = "Scraping"
-    Icon = "fa fa-2x fa-code"
-    Summary= "Summary 4"
+    Name = "Golang"
+    Icon = "svg/Go-Logo_Black.svg"
+    svg = true
+    Rating= 55
+[[skill]]
+    Name = "C/C++"
+    Icon = "svg/c.svg"
+    svg = true
+    Rating= 88

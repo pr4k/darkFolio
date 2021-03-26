@@ -1,16 +1,8 @@
 [[language]]
-    Name = "Web Dev"
-    Icon = "fa fa-2x fa-code"
-    Summary= "Summary 1"
+    Name = "English"
+    Icon = "fa fa-2x fa-language"
+    Summary= "Have speaking and writing fluency"
 [[language]]
-    Name = "Python"
-    Icon = "fa fa-2x fa-code"
-    Summary= "Summary 2"
-[[language]]
-    Name = "cloud"
-    Icon = "fa fa-2x fa-code"
-    Summary= "Summary 3"
-[[language]]
-    Name = "Scraping"
-    Icon = "fa fa-2x fa-code"
-    Summary= "Summary 4"
+    Name = "English"
+    Icon = "fa fa-2x fa-language"
+    Summary= "Native"

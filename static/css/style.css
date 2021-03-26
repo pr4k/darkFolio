@@ -270,7 +270,9 @@ body {
   color: #68e0cf;
   size: 25px;
 }
-
+.img-icons {
+  width: 65px;
+  filter: invert(98%) sepia(25%) saturate(5214%) hue-rotate(151deg) brightness(94%) contrast(86%);}
 .experience-container,
 .education-container,
 .review-container {
@@ -303,6 +305,26 @@ body {
   top: -6px;
   float: left;
 }
+.rating{
+  display: flex;
+  flex-direction: row;
+  
+}
+.skill-dot {
+  background: #68e0cf;
+  width: 15px;
+  height:15px;
+  border-radius: 50%;
+  margin: 3px;
+}
+
+.unskill-dot {
+  background: #585d65;
+  width: 15px;
+  height:15px;
+  border-radius: 50%;
+  margin: 3px;
+}
 .review-status {
   color: #68e0cf;
   font-size: 12px;
@@ -317,7 +339,36 @@ body {
   padding-top: 50px;
   font-size: 11px;
 }
+.single-chart {
+  width: 100px;
+  justify-content: space-around ;
+}
 
+.circular-chart {
+  display: block;
+  margin: 10px auto;
+  max-width: 80%;
+  max-height: 250px;
+}
+
+
+.circle {
+  fill: none;
+  stroke-width: .8;
+  stroke-linecap:square;
+}
+
+
+.circle {
+  stroke: #68e0cf;
+}
+
+.percentage {
+  fill: #68e0cf;
+  font-family: sans-serif;
+  font-size: 0.5em;
+  text-anchor: middle;
+}
 .review-quote {
   padding-top: 0px;
 }
@@ -427,4 +478,13 @@ body {
   }
   .experience-container {
   }
+}
+table{
+  margin: 0 auto;
+}
+table{
+  width: 100%;
+}
+tr{
+  
 }

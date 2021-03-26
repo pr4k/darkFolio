@@ -66,6 +66,7 @@
                   <td class="service-cell">
                      <div class="service-icon">
                         <i class={{$service.Icon}}></i>
+
                      </div>
                      <div class="service-text">
                         {{$service.Name}}
@@ -126,56 +127,25 @@
             </div>
             <br>
             <div class="education-container">
-
+               {{range .Site.Data.education.education}}
                <div class="education">
                   <div class="company-name">
-                     Polynomial
+                     {{.Name}}
                   </div>
                   <div class="status">
-                     Present1
+                     {{.Status}}
                   </div>
                   <div class="work-summary">
-                     Currently a developer architect The web development process includes: web design, web content,
-                     client-side /
+                     {{.Summary}}
                   </div>
                </div>
-               <div class="education">
-                  <div class="company-name">
-                     Apli.AI
-                  </div>
-                  <div class="status">
-                     Present2
-                  </div>
-                  <div class="work-summary">
-                     Currently a developer architect
-                  </div>
-               </div>
-               <div class="education">
-                  <div class="company-name">
-                     Freelancer
-                  </div>
-                  <div class="status">
-                     Present3
-                  </div>
-                  <div class="work-summary">
-                     Currently a developer architect
-                  </div>
-               </div>
-               <div class="education">
-                  <div class="company-name">
-                     Fiver
-                  </div>
-                  <div class="status">
-                     Present4
-                  </div>
-                  <div class="work-summary">
-                     Currently a developer architect
-                  </div>
-               </div>
+               {{end}}
+              
 
             </div>
 
       </section>
+      {{if .Site.Params.designSkills}}
       <section>
          <div class="section-started">
             <h1 class="section-heading">Design Skills </h1>
@@ -184,6 +154,7 @@
             </div>
             <br>
             <table>
+               <tbody align="center">
                {{range $count, $service :=.Site.Data.designSkills.skills}}
 
                {{if eq (mod $count 2) 0}}
@@ -205,9 +176,10 @@
                </tr>
                {{end}}
                {{end}}
-
+            </tbody>
             </table>
       </section>
+      {{end}}
 
       <section>
          <div class="section-started">
@@ -249,7 +221,9 @@
                Developing ON
             </div>
             <br>
+            
             <table>
+               <tbody align="center">
                {{range $count, $service :=.Site.Data.codingSkills.skill}}
 
                {{if eq (mod $count 2) 0}}
@@ -257,13 +231,25 @@
                   {{end}}
                   <td class="service-cell">
                      <div class="service-icon">
+                        {{if $service.svg}}
+                        <img class = "img-icons" src = {{$service.Icon}}>
+                        {{else}}
                         <i class={{$service.Icon}}></i>
+                        {{end}}
                      </div>
                      <div class="service-text">
                         {{$service.Name}}
                      </div>
-                     <div class="service-summary">
-                        {{$service.Summary}}
+                        <div class="single-chart">
+                           <svg viewBox="0 0 36 36" class="circular-chart">
+                             <path class="circle"
+                               stroke-dasharray="{{$service.Rating}}, 100"
+                               d="M18 2.0845
+                                 a 15.9155 15.9155 0 0 1 0 31.831
+                                 a 15.9155 15.9155 0 0 1 0 -31.831"
+                             />
+                             <image width="100%" height="20" class="img-icons" preserveAspectRatio="xMidYMid meet" href = {{$service.Icon}}>
+                           </svg>
                      </div>
                   </td>
 
@@ -271,7 +257,52 @@
                </tr>
                {{end}}
                {{end}}
+            </tbody>
+            </table>
+      </section>
+      
+      <section>
+         <div class="section-started">
+            <h1 class="section-heading">Frameworks </h1>
+            <div class="subtitle">
+               Developing Using
+            </div>
+            <br>
+            
+            <table>
+               <tbody align="center">
 
+               {{range $count, $service :=.Site.Data.frameworks.skill}}
+
+               {{if eq (mod $count 2) 0}}
+               <tr>
+                  {{end}}
+                  <td class="service-cell">
+                     <div class="service-icon">
+                        {{if $service.svg}}
+                        <img class = "img-icons" src = {{$service.Icon}}>
+                        {{else}}
+                        <i class={{$service.Icon}}></i>
+                        {{end}}
+                     </div>
+                     <div class="service-text">
+                        {{$service.Name}}
+                     </div>
+                     <div class="rating">
+                     {{range seq $service.Rating}}
+                     <div class=skill-dot></div>
+                     {{end}}
+                     {{range seq (sub 10 $service.Rating)}}
+                     <div class="unskill-dot"></div>
+                     {{end}}
+                  </div>
+                  </td>
+
+                  {{if eq (mod (add $count 1) 2) 0}}
+               </tr>
+               {{end}}
+               {{end}}
+               </tbody>
             </table>
       </section>
       <section>
