@@ -1,0 +1,59 @@
+<script src="/js/feather.min.js"></script>
+<script src = "/js/main.js"></script>
+<script defer src="/js/all.min.js"></script>
+<script>
+    feather.replace()
+</script>
+
+<script> 
+    var slideIndex = 1; 
+    showDivs(slideIndex,'experience'); 
+    showDivs(slideIndex,'education'); 
+    showDivs(slideIndex,'review'); 
+  
+    function plusDivs(n, containerName) { 
+        showDivs((slideIndex += n), containerName); 
+    } 
+  
+    function showDivs(n, containerName) { 
+        console.log(containerName)
+        var i; 
+        var x = document.getElementsByClassName(containerName); 
+        for (i = 0; i < x.length; i++) { 
+            x[i].style.display = "none"; 
+        }
+        if(x.length==1){
+            x[0].style.display = "block";
+        }
+        else if (n == x.length) { 
+            slideIndex = 1; 
+            x[slideIndex - 1].style.display = "block"; 
+            x[slideIndex].style.display = "block"; 
+        } 
+        else if (n < 0) { 
+            slideIndex = x.length-1; 
+            x[slideIndex - 1].style.display = "block"; 
+            x[slideIndex].style.display = "block";
+        } 
+        else if(n==0){
+
+            x[x.length - 1].style.display = "block"; 
+            x[slideIndex].style.display = "block";
+        }
+        else{
+            x[slideIndex - 1].style.display = "block"; 
+            x[slideIndex].style.display = "block";
+        }         
+    } 
+</script> 
+
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>

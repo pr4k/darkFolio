@@ -1,0 +1,16 @@
+[[services]]
+    Name = "Web Dev"
+    Icon = "fa fa-2x fa-code"
+    Summary= "Summary 1"
+[[services]]
+    Name = "Python"
+    Icon = "fa fa-2x fa-code"
+    Summary= "Summary 2"
+[[services]]
+    Name = "cloud"
+    Icon = "fa fa-2x fa-code"
+    Summary= "Summary 3"
+[[services]]
+    Name = "Scraping"
+    Icon = "fa fa-2x fa-code"
+    Summary= "Summary 4"
