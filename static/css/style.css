@@ -288,25 +288,32 @@ body {
 .experience,
 .education,
 .review {
-  /* display:inline-block; */
   padding-right: 35px;
   color: white;
 }
+.upside div{
+  display: flex!important;
+  flex-direction: row;
+
+}
 .company-name {
   font-weight: bold;
-  font-size: 15px;
+  font-size: 20px;
   margin-left: 20px;
+}
+.upside .company-name {
+  font-weight: bold;
+  margin-left: -10px;
+  font-size: 20px;
 }
 .status {
   color: #68e0cf;
   transform: rotate(-90deg);
-  font-size: 12px;
+  font-size: 10px;
   font-weight: bold;
-  position: relative;
-  white-space: nowrap;
-  left: -20px;
-  top: -6px;
-  float: left;
+  width: 60px;
+  margin-left: -18px;
+
 }
 .rating{
   display: flex;
@@ -315,18 +322,18 @@ body {
 }
 .skill-dot {
   background: #68e0cf;
-  width: 15px;
-  height:15px;
+  width: 10px;
+  height:10px;
   border-radius: 50%;
-  margin: 3px;
+  margin: 6px;
 }
 
 .unskill-dot {
   background: #585d65;
-  width: 15px;
-  height:15px;
+  width: 10px;
+  height:10px;
   border-radius: 50%;
-  margin: 3px;
+  margin: 6px;
 }
 .review-status {
   color: #68e0cf;

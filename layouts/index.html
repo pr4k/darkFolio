@@ -98,12 +98,16 @@
             <div class="experience-container">
                {{range .Site.Data.experience.experience}}
 
-               <div class="experience">
-                  <div class="company-name">
-                     {{.Name}}
-                  </div>
-                  <div class="status">
-                     {{.Status}}
+               <div class="experience upside">
+                  <div>
+                     <div class="status">
+                        {{.Status}}
+                     </div>
+                     <div class="company-name">
+                        {{.Name}}
+                     </div>
+                     
+
                   </div>
                   <div class="work-summary">
                      {{.Summary}}
@@ -128,13 +132,17 @@
             <br>
             <div class="education-container">
                {{range .Site.Data.education.education}}
-               <div class="education">
-                  <div class="company-name">
-                     {{.Name}}
+               <div class="education upside">
+                  <div>
+                     <div class="status">
+                        {{.Status}}
+                     </div>
+                     <div class="company-name">
+                        {{.Name}}
+                     </div>
+
                   </div>
-                  <div class="status">
-                     {{.Status}}
-                  </div>
+                  
                   <div class="work-summary">
                      {{.Summary}}
                   </div>
