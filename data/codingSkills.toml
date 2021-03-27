@@ -1,8 +1,8 @@
 [[skill]]
     Name = "Python"
-    Icon = "svg/python-5-logo-svg-vector.svg"
+    Icon = "fa-4x fab fa-python"
     Rating= 68
-    svg = true
+    svg = false
 [[skill]]
     Name = "Rust"
     Icon = "fab fa-4x fa-rust"

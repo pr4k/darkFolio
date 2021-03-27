@@ -229,7 +229,8 @@
                {{if eq (mod $count 2) 0}}
                <tr>
                   {{end}}
-                  <td class="service-cell">
+                  <td class="service-cell coding-skill">
+                     <div>
                      <div class="service-icon">
                         {{if $service.svg}}
                         <img class = "img-icons" src = {{$service.Icon}}>
@@ -240,6 +241,7 @@
                      <div class="service-text">
                         {{$service.Name}}
                      </div>
+                     </div>
                         <div class="single-chart">
                            <svg viewBox="0 0 36 36" class="circular-chart">
                              <path class="circle"
@@ -248,7 +250,7 @@
                                  a 15.9155 15.9155 0 0 1 0 31.831
                                  a 15.9155 15.9155 0 0 1 0 -31.831"
                              />
-                             <image width="100%" height="20" class="img-icons" preserveAspectRatio="xMidYMid meet" href = {{$service.Icon}}>
+                             <text x="18" y="20.35" class="percentage">{{$service.Rating}}%</text>
                            </svg>
                      </div>
                   </td>
@@ -319,13 +321,23 @@
             <br>
             <div class="review-container">
                {{range .Site.Data.reviews.reviews}}
+               
                <div class="review">
-                  <div class="company-name">
-                     {{.Name}}
+                  <div class="image-section">
+                     <div class="profile">
+                        <img src="https://myour.bslthemes.com/wp-content/uploads/2020/06/rev1.png" alt="" class="profile-img">
+                     </div>
+                    <div class="name-section">
+                     <div class="company-name reviewer-name">
+                        {{.Name}}
+                     </div>
+                     <div class="review-status">
+                        {{.Position}}
+                     </div>
+                    </div>
                   </div>
-                  <div class="review-status">
-                     {{.Position}}
-                  </div>
+                 
+                  <br>
                   <div class="review-container-summary">
                      <div class="work-summary review-quote">
                         {{.Review}}

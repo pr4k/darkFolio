@@ -266,9 +266,13 @@ body {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
+.coding-skill{
+  display: flex;
+  flex-direction: row;
+}
 .service-icon {
   color: #68e0cf;
-  size: 25px;
+  size: 45px;
 }
 .img-icons {
   width: 65px;
@@ -278,9 +282,8 @@ body {
 .review-container {
   display: flex;
   padding-top: 30px;
-  height: 270px;
   overflow-x: hidden;
-  width: 80%;
+  width: 100%;
 }
 .experience,
 .education,
@@ -291,7 +294,7 @@ body {
 }
 .company-name {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 15px;
   margin-left: 20px;
 }
 .status {
@@ -327,7 +330,7 @@ body {
 }
 .review-status {
   color: #68e0cf;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: bold;
   position: relative;
   word-wrap: break-word;
@@ -369,6 +372,15 @@ body {
   font-size: 0.5em;
   text-anchor: middle;
 }
+.review{
+  display: flex;
+}
+.reviewer-name{
+  justify-content: left;
+}
+.profile-img{
+  width: 60px;
+}
 .review-quote {
   padding-top: 0px;
 }
@@ -384,6 +396,13 @@ body {
   padding-right: 10px;
   height: 100px;
   font-weight: 800;
+}
+.image-section{
+  display: flex;
+  margin: 15px;
+}
+.name-section{
+  flex-direction: column;
 }
 .review-container-summary {
   display: inline-flex;
@@ -425,6 +444,23 @@ body {
   padding: 25px 10px 0 10px;
   z-index: 13;
   /* overflow-x: hidden; */
+}
+
+
+table{
+  margin: 0 auto;
+}
+table{
+  width: 100%;
+}
+
+tr{
+  display: flex;
+  justify-content: center;
+
+}
+td{
+  margin: 30px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -476,15 +512,35 @@ body {
     padding-top: 20px;
     align-self: center;
   }
-  .experience-container {
+  .image-section{
+    flex-direction: column;
   }
-}
-table{
-  margin: 0 auto;
-}
-table{
-  width: 100%;
-}
-tr{
+  .reviewer-name, .review-status{
+    margin-top: 10px ;
+    margin-left: 0;
+  }
+  tr{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   
+  }
+  td{
+    margin: 0 auto;
+  }
+  .status {
+   transform: rotate(0deg);
+   float: none;
+   left: 0;
+  }
+   .company-name{
+    margin: 10px;
+  }
+  .experience .work-summary{
+    padding-top: 0;
+  }
+  .image-section{
+    margin-left: 32px;
+  }
+
 }
