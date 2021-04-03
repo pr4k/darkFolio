@@ -145,7 +145,7 @@ body {
 }
 
 .section-heading-curved {
-  margin-top: 25%;
+  margin-top: 16%;
   margin-left: -22%;
   padding: 4.2vw;
   font-size: 3.7vw;
@@ -537,8 +537,8 @@ td{
   }
   .status {
    transform: rotate(0deg);
-   float: none;
-   left: 0;
+   margin-left: 0px!important;
+   display: block!important;
   }
    .company-name{
     margin: 10px;
